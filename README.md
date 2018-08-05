@@ -7,8 +7,8 @@ The website (ReactJS) uses this API to load projects, education details, etc.
 The API uses Django REST Framework along with DJONGO for enabling MongoDB as backend.
 
 Requirements:
-Python3
-pip3
+Python3,
+pip3,
 MongoDB (Tested with V4.0.0)
 
 ```
