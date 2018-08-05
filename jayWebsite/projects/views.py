@@ -10,4 +10,4 @@ class ProjectViewSet(viewsets.ModelViewSet):
     """
     queryset = Project.objects.all() #.order_by('-date_joined')
     serializer_class = ProjectSerializer
-
+    http_method_names = ['get']
