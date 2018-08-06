@@ -6,6 +6,6 @@ class Project(models.Model):
     description = models.CharField(max_length=1000000)
     tags = models.CharField(max_length=1000000)
     url = models.CharField(max_length=1000)
-    message = models.CharField(max_length=255)
-
-
+    url_type = models.CharField(max_length=1000)
+    secondary_url = models.CharField(max_length=1000)
+    secondary_url_type = models.CharField(max_length=1000)
