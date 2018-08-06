@@ -25,7 +25,7 @@ SECRET_KEY = 'kada86#@2*c%w0dd#rxlwez1ixg*j2!q9h$*infd)+6+hc4b6&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['18.219.99.237']
 
 REST_FRAMEWORK = {
    'DEFAULT_PERMISSION_CLASSES': (
