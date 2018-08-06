@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['18.219.99.237', '127.0.0.1']
 
 REST_FRAMEWORK = {
    'DEFAULT_PERMISSION_CLASSES': (
-       'rest_framework.permissions.IsAuthenticated',
+       'rest_framework.permissions.AllowAny',
    ),
 }
 
