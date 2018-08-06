@@ -49,3 +49,14 @@ To ensure security, configure network settings:
 3. Inbound and outbound Django accessible for all IPs at port 8000
 
 
+Use Environment variables for Debug and Security key. Change settings.py
+```
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
+```
+
+Deploy:
+```
+python3 manage.py check --deploy
+```
