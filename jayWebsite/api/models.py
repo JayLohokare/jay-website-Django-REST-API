@@ -17,6 +17,7 @@ class Education(models.Model):
     year = models.CharField(max_length=1000)
     location = models.CharField(max_length=1000)
     image_url = models.CharField(max_length=1000)
+    url = models.CharField(max_length=1000)
     order = models.CharField(max_length=100)
 
 class Experience(models.Model):
@@ -26,6 +27,7 @@ class Experience(models.Model):
     year = models.CharField(max_length=1000)
     location = models.CharField(max_length=1000)
     image_url = models.CharField(max_length=1000)
+    url = models.CharField(max_length=1000)
     order = models.CharField(max_length=100)
 
 class Research(models.Model):
