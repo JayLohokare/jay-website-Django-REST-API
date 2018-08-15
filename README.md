@@ -23,7 +23,7 @@ To replicate the project structure:
 
 ```
 django-admin startproject jayWebsite
-python3 manage.py startapp projects
+python3 manage.py startapp api
 #Create Mongo database 'jayWebsite'
 ```
 
