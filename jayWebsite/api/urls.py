@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework import routers
-from jayWebsite.projects import views
+from jayWebsite.api import views
 
 router = routers.DefaultRouter()
 router.register(r'projects', views.ProjectViewSet)
