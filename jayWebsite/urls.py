@@ -22,6 +22,6 @@ from rest_framework import routers, serializers, viewsets
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('jayWebsite.projects.urls')),
+    url(r'^', include('jayWebsite.api.urls')),
 
 ]
