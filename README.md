@@ -23,7 +23,7 @@ To replicate the project structure:
 
 ```
 django-admin startproject jayWebsite
-python3 manage.py startapp projects
+python3 manage.py startapp api
 #Create Mongo database 'jayWebsite'
 ```
 
@@ -31,7 +31,7 @@ Steps to follow for creating MongoDB schemas, users and to enable the REST APIs:
 
 ```
 python3 manage.py createsuperuser #Follow the instructions seen on command line
-python3 manage.py makemigrations projects
+python3 manage.py makemigrations api
 python3 manage.py migrate
 ```
 
