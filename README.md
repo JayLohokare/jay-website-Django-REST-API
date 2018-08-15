@@ -17,6 +17,7 @@ pip3 install djangorestframework
 pip3 install markdown       
 pip3 install django-filter  
 pip3 install djongo
+pip install django-cors-headers
 ```
 
 To replicate the project structure:
