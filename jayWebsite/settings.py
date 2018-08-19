@@ -137,5 +137,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '~/jay-website-Django-REST-API/staticfiles/'
+STATIC_URL = '/staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
