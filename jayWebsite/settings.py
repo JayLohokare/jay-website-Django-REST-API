@@ -137,5 +137,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '../api/staticfiles/'
+STATIC_URL = '../../api/staticfiles/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
