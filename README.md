@@ -18,14 +18,17 @@ pip3 install markdown
 pip3 install django-filter  
 pip3 install djongo
 pip install django-cors-headers
+pip3 install whitenoise
 ```
+Create MongoDB database 'jayWebsite'.
 
 To replicate the project structure:
 
 ```
-django-admin startproject jayWebsite
+django-admin startproject PROJECTNAME
+#django-admin startproject jayWebsite
+
 python3 manage.py startapp api
-#Create Mongo database 'jayWebsite'
 ```
 
 Steps to follow for creating MongoDB schemas, users and to enable the REST APIs:
@@ -60,4 +63,15 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
 Deploy:
 ```
 python3 manage.py check --deploy
+```
+
+Migrate static files:
+```
+python3 manage.py collectstatic
+```
+
+Run production server
+```
+gunicorn --bind IP:PORT PROJECTNAME.wsgi --daemon
+#gunicorn --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
 ```
