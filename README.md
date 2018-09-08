@@ -75,3 +75,9 @@ Run production server
 gunicorn --bind IP:PORT PROJECTNAME.wsgi --daemon
 #gunicorn --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
 ```
+
+Stopping Gunicorn server
+```
+ps ax|grep gunicorn
+kill -9 PID
+```
