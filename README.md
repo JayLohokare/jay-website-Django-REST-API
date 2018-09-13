@@ -81,3 +81,16 @@ Stopping Gunicorn server
 ps ax|grep gunicorn
 kill -9 PID
 ```
+
+To enable HTTPS on Gunicorn:
+1. Generate SSL keys/certificate
+```
+openssl genrsa 1024 > host.key
+chmod 400 host.key
+openssl req -new -x509 -nodes -sha1 -days 365 -key host.key -out host.cert
+```
+2. Provide the cert to Gunicorn while starting
+```
+gunicorn --certfile=server.crt --keyfile=server.key --bind IP:PORT PROJECTNAME.wsgi --daemon
+#gunicorn -certfile=server.crt --keyfile=server.key --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
+```
