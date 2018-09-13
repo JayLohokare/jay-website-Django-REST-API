@@ -83,13 +83,17 @@ kill -9 PID
 ```
 
 To enable HTTPS on Gunicorn:
-1. Generate self-signed SSL keys/certificate
+1. Generate SSL keys/certificate
 ```
 git clone https://github.com/certbot/certbot
 cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone --email jaylohokare@gmail.com -d 18.219.99.237
+
+./certbot-auto renew --standalone --no-self-upgrade --pre-hook "service nginx stop" --post-hook "service nginx start" --quiet
+#This autorenews the certs. Note that the pre-hook and post-hook commands are not required as this project doesnt use ngnix
 ```
-2. Provide self-signed cert to Gunicorn while starting
+
+2. Provide the cert to Gunicorn while starting
 ```
-gunicorn --certfile=server.crt --keyfile=server.key --bind IP:PORT PROJECTNAME.wsgi --daemon
-#gunicorn --certfile host.cert --keyfile host.key --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
+sudo gunicorn --certfile server.crt --keyfile server.key --bind IP:PORT PROJECTNAME.wsgi --daemon
+#sudo gunicorn --certfile /etc/letsencrypt/live/jaylohokare.ml/fullchain.pem --keyfile /etc/letsencrypt/live/jaylohokare.ml/privkey.pem --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
 ```
