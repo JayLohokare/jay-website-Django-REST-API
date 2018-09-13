@@ -26,7 +26,7 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', False))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.219.99.237', '127.0.0.1']
+ALLOWED_HOSTS = ['18.219.99.237', '127.0.0.1', 'www.jaylohokare.ml', 'jaylohokare.ml', 'https://jaylohokare.ml', 'http://jaylohokare.ml']
 
 REST_FRAMEWORK = {
    'DEFAULT_PERMISSION_CLASSES': (
