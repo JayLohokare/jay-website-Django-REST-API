@@ -97,3 +97,6 @@ cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone 
 sudo gunicorn --certfile server.crt --keyfile server.key --bind IP:PORT PROJECTNAME.wsgi --daemon
 #sudo gunicorn --certfile /etc/letsencrypt/live/jaylohokare.ml/fullchain.pem --keyfile /etc/letsencrypt/live/jaylohokare.ml/privkey.pem --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
 ```
+
+To add new projects, experiences, etc login at -
+url:8000/admin
