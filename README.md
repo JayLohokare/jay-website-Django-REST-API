@@ -105,12 +105,16 @@ url:8000/admin
 
 To renew SSL certificates:
 1. Go to EC2 console and open all ports/IP (For enabling cert update)
-2. Go to certificateGen folder and run 
+2. Stop ngnix
 ```
-cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone --email jaylohokare@gmail.com -d 18.219.99.237
+sudo /etc/init.d/nginx stop
 ```
-3. Go to jay-website-Django-REST-API folder and run
+3. Go to certificateGen folder and run 
+```
+cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone --email jaylohokare@gmail.com -d jaylohokare.ml
+```
+4. Go to jay-website-Django-REST-API folder and run
 ```
 sudo gunicorn --certfile /etc/letsencrypt/live/jaylohokare.ml/fullchain.pem --keyfile /etc/letsencrypt/live/jaylohokare.ml/privkey.pem --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
 ```
-4. Reset security settings of EC2
+5. Reset security settings of EC2
