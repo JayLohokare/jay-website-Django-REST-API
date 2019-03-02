@@ -105,7 +105,7 @@ url:8000/admin
 
 To renew SSL certificates:
 1. Go to EC2 console and open all ports/IP (For enabling cert update)
-2. Stop ngnix
+2. Stop ngnix (If renewal of certificates gives errors
 ```
 sudo /etc/init.d/nginx stop
 ```
@@ -118,3 +118,5 @@ cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone 
 sudo gunicorn --certfile /etc/letsencrypt/live/jaylohokare.ml/fullchain.pem --keyfile /etc/letsencrypt/live/jaylohokare.ml/privkey.pem --bind 172.31.19.120:8000 jayWebsite.wsgi --daemon
 ```
 5. Reset security settings of EC2
+
+6. If API content is missing, check mongodb status (Restart MongoDb service)
