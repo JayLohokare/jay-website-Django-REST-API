@@ -119,4 +119,13 @@ sudo gunicorn --certfile /etc/letsencrypt/live/jaylohokare.ml/fullchain.pem --ke
 ```
 5. Reset security settings of EC2
 
-6. If API content is missing, check mongodb status (Restart MongoDb service)
+## If API is still not live
+
+6. Make sure certbot folder name (sudo ls /etc/letsencrypt/live/) is 'jaylohokare.ml'
+
+7. Check mongodb status (Restart MongoDb service)
+```
+sudo rm /var/lib/mongodb/mongod.lock
+sudo service mongodb restart
+```
+
