@@ -86,7 +86,7 @@ To enable HTTPS on Gunicorn:
 1. Generate SSL keys/certificate
 ```
 git clone https://github.com/certbot/certbot
-cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone --email jaylohokare@gmail.com -d 18.219.99.237
+cd certbot && ./certbot-auto certonly --noninteractive --agree-tos --standalone --email jaylohokare@gmail.com -d jaylohokare.ml
 
 ./certbot-auto renew --standalone --no-self-upgrade --pre-hook "service nginx stop" --post-hook "service nginx start" --quiet
 #This autorenews the certs. Note that the pre-hook and post-hook commands are not required as this project doesnt use ngnix
